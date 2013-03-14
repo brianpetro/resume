@@ -20,7 +20,16 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
+# Angular
+gem 'angularjs-rails'
+gem 'angular-ui-bootstrap-rails'
+
+# Twitter Bootstrap
+gem 'bootstrap-sass'
+gem 'bootswatch-rails'
+
+# PDF Generation 
+gem 'prawn'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
