@@ -1,29 +1,26 @@
-<h1>Listing entries</h1>
+<div ng-controller="EntryCtrl">
+	<div class="row">
+		<div class="span10 offset1">
+			<a href="/entries.pdf" class="btn btn-primary pull-right">View PDF</a>
+			<h1>Brian Petro</h1>
+			<i>Click entries to expand. Built with Ruby 2, Rails 4, and AngularJS.</i>
+			<ul class="unstyled">
+				<li ng-repeat="entry in entries" ng-init="entryClass=isClass(entry.isProject)">
+					<ul class="unstyled">
+						<li>
+							<div class="alert" ng-class="entryClass">
+								<a ng-click="entry.showThis = !entry.showThis" href=""><h3>{{entry.title}}</h3></a>
+								<div style="background-color:#000000; min-width:100px; min-height:100px;" ng-show="entry.showThis">
+									{{entry.summary}}
+									<a href="{{entry.entry_url}}" ng-show="entry.entry_url">Open Project</a>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div> <!-- class span -->
+	</div> <!-- class row -->
+</div> <!-- ng-controller -->
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Details</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @entries.each do |entry| %>
-    <tr>
-      <td><%= entry.title %></td>
-      <td><%= entry.details %></td>
-      <td><%= link_to 'Show', entry %></td>
-      <td><%= link_to 'Edit', edit_entry_path(entry) %></td>
-      <td><%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br />
-
-<%= link_to 'New Entry', new_entry_path %>
