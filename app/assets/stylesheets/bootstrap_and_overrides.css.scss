@@ -1,0 +1,20 @@
+// Using 'Cosmo' Bootswatch
+// First import cosmo variables
+@import "bootswatch/cosmo/variables";
+
+// Then bootstrap itself
+@import "bootstrap";
+
+// Bootstrap body padding for fixed navbar
+body { padding-top: 0px; }
+
+// Responsive styles go here in case you want them
+@import "bootstrap-responsive";
+
+// And finally bootswatch style itself
+@import "bootswatch/cosmo/bootswatch";
+
+
+body {
+	background-image:url("https://dl.dropbox.com/s/kzobu7ajnmzjxnp/noisy_grid.png?token_hash=AAEQC1bRsD3g_5J-Zca_Rk5oKTchiZ_g_Mgzvlcr3ltrcw&dl=1");
+}
