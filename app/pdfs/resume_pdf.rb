@@ -28,25 +28,35 @@ class ResumePdf < Prawn::Document
 	
 	def list_experiences(entries)
 
-		# Begin Projects	
+		# List All Entries	
 		start_new_page
-		text "Projects", size: 24
+		text "All Entries", size: 24
 		move_down 10
-		entries.where(isProject: true).each do |e|
+		entries.each do |e|
 			text e.title, size: 16
 			text "- #{e.details}"
 			text " "
 		end
 		
+		# Begin Projects	
+#		start_new_page
+	#	text "Projects", size: 24
+	#	move_down 10
+#		entries.where(isProject: true).each do |e|
+	#		text e.title, size: 16
+		#	text "- #{e.details}"
+	#		text " "
+#		end
+		
 		#Begin Techs
-		start_new_page
-		text "Dev Tools", size: 24
-		move_down 10
-		entries.where(isTech: true).each do |e|
-			text e.title, size: 16
-			text "- #{e.details}"
-			text " "
-		end
+#		start_new_page
+#		text "Dev Tools", size: 24
+#		move_down 10
+#		entries.where(isTech: true).each do |e|
+#			text e.title, size: 16
+#			text "- #{e.details}"
+#			text " "
+#		end
 		
 	end
 	
