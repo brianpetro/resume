@@ -11,7 +11,7 @@
 							<div class="alert" ng-class="entryClass">
 								<a ng-click="entry.showThis = !entry.showThis" href=""><h3>{{entry.title}}</h3></a>
 								<div style="background-color:#000000; min-width:100px; min-height:100px;" ng-show="entry.showThis">
-									{{entry.summary}}
+									{{entry.details}}
 									<a href="{{entry.entry_url}}" ng-show="entry.entry_url">Open Project</a>
 								</div>
 							</div>
