@@ -4,15 +4,15 @@ class EntriesController < ApplicationController
 	
   # GET /entries
   def index
+  	@entries = Entry.all
   	respond_to do |format|
     	format.json do
-    		respond_with Entry.all
+    		render json: @entries.as_json
     	end
     	format.html do
     		respond_with Entry.all
     	end
     	format.pdf do
-    		@entries = Entry.all
     		pdf = ResumePdf.new(@entries)
     		send_data pdf.render, filename: "Brian_Petro_Resume_#{Time.now}",
     													type: "application/pdf",
@@ -68,6 +68,6 @@ class EntriesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def entry_params
-      params.require(:entry).permit(:title, :summary, :isProject, :isTech)
+      params.require(:entry).permit(:title, :details)
     end
 end
