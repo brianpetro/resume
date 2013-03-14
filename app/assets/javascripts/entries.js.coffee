@@ -1,3 +1,16 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+app = angular.module("Resume", ["ngResource"])
+
+app.factory "Entry", ["$resource", ($resource) ->
+  $resource("/entries")
+]
+
+@EntryCtrl = ["$scope", "Entry", ($scope, Entry) ->
+  $scope.entries = Entry.query()
+  $scope.showThis = false
+  
+  $scope.isClass = (isProject) ->
+  	if isProject == true
+  		$scope.myVar = "project alert-info"
+  	else
+  		$scope.myVar = "tech alert-success"
+]
