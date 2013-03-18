@@ -4,6 +4,13 @@
 			<a href="/entries.pdf" class="btn btn-primary pull-right">View PDF</a>
 			<h1>Brian Petro</h1>
 			<i>Click entries to expand. Built with Ruby 2, Rails 4, and AngularJS.</i>
+			<!-- BEGIN Linkedin Badge -->
+			<a href="http://www.linkedin.com/pub/brian-petro/37/720/8b">
+
+		        <img src="http://www.linkedin.com/img/webpromo/btn_viewmy_160x33.png" width="160" height="33" border="0" alt="View Brian Petro's profile on LinkedIn">
+
+		  </a>
+    	<!-- END Linkedin Badge -->
 			<ul class="unstyled">
 				<li ng-repeat="entry in entries" ng-init="entryClass=isClass(entry.isProject)">
 					<ul class="unstyled">
@@ -22,5 +29,3 @@
 		</div> <!-- class span -->
 	</div> <!-- class row -->
 </div> <!-- ng-controller -->
-
-
