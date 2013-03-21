@@ -15,13 +15,23 @@ body { padding-top: 0px; }
 @import "bootswatch/cosmo/bootswatch";
 
 
-body {
-	background-image:url("https://dl.dropbox.com/s/kzobu7ajnmzjxnp/noisy_grid.png?token_hash=AAEQC1bRsD3g_5J-Zca_Rk5oKTchiZ_g_Mgzvlcr3ltrcw&dl=1");
-}
-
+// Overrides
 a {
 	color: #dddddd;
 }
 a:hover {
 	color: #ffffff;
+}
+
+a.btn {
+	color: #000000;
+}
+
+body {
+	background-image:url("https://dl.dropbox.com/s/kzobu7ajnmzjxnp/noisy_grid.png?token_hash=AAEQC1bRsD3g_5J-Zca_Rk5oKTchiZ_g_Mgzvlcr3ltrcw&dl=1");
+}
+
+.well {
+	background-color: #000000;
+	background-image: url("https://dl.dropbox.com/s/rpvyv1jxyhtsiu4/dark-imperfect-bg.png?token_hash=AAGvSy3wO5xSHHueT4CzRZlKinnLi56GmGbhK6ZB-aGU-g&dl=1");
 }
