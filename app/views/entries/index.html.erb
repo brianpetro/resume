@@ -18,7 +18,14 @@
 					<ul class="unstyled">
 						<li>
 							<div class="alert" ng-class="entryClass">
-								<a ng-click="entry.showThis = !entry.showThis" href=""><h3>{{entry.title}}</h3></a>
+								<a ng-click="entry.showThis = !entry.showThis" href="">
+									<span class="lead pull-right">
+									Click to expand.
+									</span>
+									<h2>
+										{{entry.title}}
+									</h2>
+								</a>
 								<div style="background-color:#000000; min-width:100px; min-height:100px;" ng-show="entry.showThis">
 									{{entry.details}}
 									<a href="{{entry.entry_url}}" ng-show="entry.entry_url">Open Project</a>
