@@ -1,18 +1,20 @@
 <div ng-controller="EntryCtrl">
 	<div class="row">
-		<div class="span10 offset1">
+		<div class="span5 offset1">
 			<a href="/entries.pdf" class="btn btn-primary pull-right">View PDF</a>
 			<h1>Brian Petro</h1>
-			<i>Click entries to expand. Built with Ruby 2, Rails 4, and AngularJS.</i>
-			<!-- BEGIN Linkedin Badge -->
-			<a href="http://www.linkedin.com/pub/brian-petro/37/720/8b">
-
-		        <img src="http://www.linkedin.com/img/webpromo/btn_viewmy_160x33.png" width="160" height="33" border="0" alt="View Brian Petro's profile on LinkedIn">
-
-		  </a>
-    	<!-- END Linkedin Badge -->
+			<i>Click entries to expand. Built with Rails 4 and AngularJS.</i>
+			<%= render 'social' %>
+		</div>
+		<div class="span5">
+			<div class="alert">
+				<h2>Resume Instant Search >></h2>
+				<input type="text" ng-model="search.$" class="input-large search-query">
+			</div>
+		</div>
+		<div class="span10 offset1">
 			<ul class="unstyled">
-				<li ng-repeat="entry in entries" ng-init="entryClass=isClass(entry.isProject)">
+				<li ng-repeat="entry in entries | orderBy:'title' | filter:search" ng-init="entryClass=isClass(entry.isProject)">
 					<ul class="unstyled">
 						<li>
 							<div class="alert" ng-class="entryClass">
