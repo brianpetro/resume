@@ -26,9 +26,9 @@
 										{{entry.title}}
 									</h2>
 								</a>
-								<div style="background-color:#000000; min-width:100px; min-height:100px;" ng-show="entry.showThis">
+								<div class="well" ng-show="entry.showThis">
 									{{entry.details}}
-									<a href="{{entry.entry_url}}" ng-show="entry.entry_url">Open Project</a>
+									<a href="{{entry.entry_url}}" ng-show="entry.entry_url" class="btn btn-success btn-small">Open Project</a>
 								</div>
 							</div>
 						</li>
