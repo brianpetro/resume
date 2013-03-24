@@ -19,8 +19,3 @@ app.factory "Commits", ["$resource", ($resource) ->
   	else
   		$scope.myVar = "tech alert-success"
 ]
-
-app.directive "mits", () ->
-	commys = (attrs) ->
-		attrs.mits
-	template: commys
