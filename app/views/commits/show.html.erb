@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Commit:</strong>
+  <%= @commit.commit %>
+</p>
+
+<p>
+  <strong>Repo:</strong>
+  <%= @commit.repo %>
+</p>
+
+<p>
+  <strong>Commit timestamp:</strong>
+  <%= @commit.commit_timestamp %>
+</p>
+
+<%= link_to 'Edit', edit_commit_path(@commit) %> |
+<%= link_to 'Back', commits_path %>

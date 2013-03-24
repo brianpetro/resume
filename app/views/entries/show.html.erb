@@ -1,5 +1,7 @@
-<div ng-controller="EntryCtrl">
-
-	<div mits="commits"></div>
-
-</div>
+<ul>
+	<% Octokit.list_commits("brianpetro/resume").each do |e| %>
+		<li>
+			<%= e.commit.message %>
+		</li>
+	<% end %>
+</ul>
