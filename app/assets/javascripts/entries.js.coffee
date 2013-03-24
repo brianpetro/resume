@@ -4,10 +4,15 @@ app.factory "Entry", ["$resource", ($resource) ->
   $resource("/entries")
 ]
 
-@EntryCtrl = ["$scope", "Entry", ($scope, Entry) ->
+app.factory "Commit", ["$resource", ($resource) ->
+  $resource("https://api.github.com/repos/:owner/:repo/commits", {owner: "brianpetro", repo: "resume"}, {})
+]
+
+@EntryCtrl = ["$scope", "Entry", "Commit", ($scope, Entry, Commit) ->
   $scope.entries = Entry.query()
   $scope.showThis = false
-  
+  $scope.commits = Commit.query()
+
   $scope.isClass = (isProject) ->
   	if isProject == true
   		$scope.myVar = "project alert-info"
