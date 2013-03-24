@@ -4,14 +4,14 @@ app.factory "Entry", ["$resource", ($resource) ->
   $resource("/entries")
 ]
 
-app.factory "Commit", ["$resource", ($resource) ->
+app.factory "Commits", ["$resource", ($resource) ->
   $resource("https://api.github.com/repos/:owner/:repo/commits", {owner: "brianpetro", repo: "resume"}, {})
 ]
 
-@EntryCtrl = ["$scope", "Entry", "Commit", ($scope, Entry, Commit) ->
+@EntryCtrl = ["$scope", "Entry", "Commits", ($scope, Entry, Commits) ->
   $scope.entries = Entry.query()
   $scope.showThis = false
-  $scope.commits = Commit.query()
+  $scope.commits = Commits.query()
 
   $scope.isClass = (isProject) ->
   	if isProject == true
@@ -19,3 +19,8 @@ app.factory "Commit", ["$resource", ($resource) ->
   	else
   		$scope.myVar = "tech alert-success"
 ]
+
+app.directive "mits", () ->
+	commys = (attrs) ->
+		attrs.mits
+	template: commys
