@@ -27,6 +27,14 @@
 						<div class="well" ng-show="entry.showThis">
 							{{entry.details}}
 							<a href="{{entry.entry_url}}" ng-show="entry.entry_url" class="btn btn-success btn-small">Open Project</a>
+							<div>
+								<h3>Commits:</h3>
+								<ul ng-repeat="c in commits">
+									<li>
+										{{c.commit.message}} at <i>{{c.commit.committer.date}}</i>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</li>
