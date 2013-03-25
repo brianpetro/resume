@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130314214823) do
+ActiveRecord::Schema.define(version: 20130324230349) do
+
+  create_table "commits", force: true do |t|
+    t.text     "commit"
+    t.string   "repo"
+    t.string   "commit_timestamp"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "entries", force: true do |t|
     t.string   "title"
