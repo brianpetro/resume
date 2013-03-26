@@ -25,8 +25,8 @@
 							<h2>{{entry.title}}</h2>
 						</a>
 						<div class="well" ng-show="entry.showThis">
-							{{entry.details}}
-							<a href="{{entry.entry_url}}" ng-show="entry.entry_url" class="btn btn-success btn-small">Open Project</a>
+							<a href="{{entry.entry_url}}" ng-show="entry.entry_url" class="btn btn-success btn-small pull-right">Open Project</a>
+							<div ng-bind-html-unsafe="entry.details"></div>
 						</div>
 					</div>
 				</li>
