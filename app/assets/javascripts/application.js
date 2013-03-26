@@ -13,4 +13,5 @@
 //= require angular
 //= require angular-resource
 //= require angular-ui-bootstrap
+//= require tiny_mce/tiny_mce.js
 //= require_tree .
