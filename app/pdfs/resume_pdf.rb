@@ -34,8 +34,9 @@ class ResumePdf < Prawn::Document
 		text "All Entries", size: 24
 		move_down 10
 		entries.each do |e|
-			text e.title, size: 16
-			text "- #{strip_tags e.details}"
+			text "<b>#{e.title}</b>", size: 16, inline_format: true
+			text "<i>#{e.entry_url}</i>", inline_format: true
+			text "#{strip_tags e.details.gsub(/&nbsp;/i," ")}"
 			text " "
 		end
 

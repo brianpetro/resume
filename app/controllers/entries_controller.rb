@@ -4,13 +4,13 @@ class EntriesController < ApplicationController
 
   # GET /entries
   def index
-  	@entries = Entry.all
+  	@entries = Entry.order('title').each
   	respond_to do |format|
     	format.json do
     		render json: @entries.as_json
     	end
     	format.html do
-    		respond_with Entry.all
+    		respond_with @entries
     	end
     	format.pdf do
     		pdf = ResumePdf.new(@entries)
