@@ -4,14 +4,9 @@ app.factory "Entry", ["$resource", ($resource) ->
   $resource("/entries")
 ]
 
-app.factory "Commits", ["$resource", ($resource) ->
-  $resource("https://api.github.com/repos/:owner/:repo/commits", {owner: "brianpetro", repo: "resume"}, {})
-]
-
-@EntryCtrl = ["$scope", "Entry", "Commits", ($scope, Entry, Commits) ->
+@EntryCtrl = ["$scope", "Entry", ($scope, Entry) ->
   $scope.entries = Entry.query()
   $scope.showThis = false
-  $scope.commits = Commits.query()
 
   $scope.isClass = (isProject) ->
   	if isProject == true
