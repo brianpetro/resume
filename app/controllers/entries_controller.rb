@@ -27,11 +27,20 @@ class EntriesController < ApplicationController
 
   # GET /entries/new
   def new
-    @entry = Entry.new
+  	if params[:unlock]
+    	@entry = Entry.new
+   	else
+   		redirect_to root_path
+   	end
   end
 
   # GET /entries/1/edit
   def edit
+    if params[:unlock]
+
+   	else
+   		redirect_to root_path
+   	end
   end
 
   # POST /entries
