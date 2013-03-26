@@ -1,3 +1,4 @@
+include ActionView::Helpers::SanitizeHelper
 class ResumePdf < Prawn::Document
 
 	def initialize(entries)
@@ -8,37 +9,37 @@ class ResumePdf < Prawn::Document
 		contact_info
 		list_experiences(entries)
 	end
-	
+
 	def resume_header
 		text "Brian Petro", size: 32
 		move_down 20
 	end
-	
+
 	def cover_statement
 		text "If what you are looking for is a self-motivated and technically apt team member, contact me and continue this conversation."
 		move_down 20
 	end
-	
+
 	def contact_info
 		text "Brian@plexm.com"
 		text "267-474-8036"
 		text "70 Berkshire Lane"
-		text "Palm Coast, FL 32137"	
+		text "Palm Coast, FL 32137"
 	end
-	
+
 	def list_experiences(entries)
 
-		# List All Entries	
+		# List All Entries
 		start_new_page
 		text "All Entries", size: 24
 		move_down 10
 		entries.each do |e|
 			text e.title, size: 16
-			text "- #{e.details}"
+			text "- #{strip_tags e.details}"
 			text " "
 		end
-		
-		# Begin Projects	
+
+		# Begin Projects
 #		start_new_page
 	#	text "Projects", size: 24
 	#	move_down 10
@@ -47,7 +48,7 @@ class ResumePdf < Prawn::Document
 		#	text "- #{e.details}"
 	#		text " "
 #		end
-		
+
 		#Begin Techs
 #		start_new_page
 #		text "Dev Tools", size: 24
@@ -57,7 +58,7 @@ class ResumePdf < Prawn::Document
 #			text "- #{e.details}"
 #			text " "
 #		end
-		
+
 	end
-	
+
 end
