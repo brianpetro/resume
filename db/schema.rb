@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130327135711) do
+ActiveRecord::Schema.define(version: 20130327135810) do
 
   create_table "commits", force: true do |t|
     t.text     "commit"
@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(version: 20130327135711) do
     t.integer  "article_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "resource_id"
   end
 
   add_index "taggings", ["article_id"], name: "index_taggings_on_article_id"
