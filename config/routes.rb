@@ -1,4 +1,6 @@
 Brianpetro::Application.routes.draw do
+  resources :dones
+
   resources :commits
 
   resources :entries

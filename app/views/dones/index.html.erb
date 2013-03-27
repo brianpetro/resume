@@ -1,0 +1,15 @@
+<div class="row">
+	<div class="span4 offset4">
+		<div ng-controller="MainCtrl">
+			<form ng-submit="addTodone()" class="form-search">
+				<input type="text" ng-model="newTodone.gist">
+				<input type="submit" value="Add">
+			</form>
+			<ul class="unstyled">
+				<li ng-repeat="done in to_dones">
+					<div class="alert alert-success">{{done.gist}}</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>

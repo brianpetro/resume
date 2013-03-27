@@ -11,12 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130324230349) do
+ActiveRecord::Schema.define(version: 20130327104627) do
 
   create_table "commits", force: true do |t|
     t.text     "commit"
     t.string   "repo"
     t.string   "commit_timestamp"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "dones", force: true do |t|
+    t.text     "gist"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
