@@ -2,9 +2,9 @@
   $scope.entries = Entry.query()
   $scope.showThis = false
 
-  $scope.isClass = (isProject) ->
-  	if isProject == true
-  		$scope.myVar = "project alert-info"
+  $scope.isClass = (tech) ->
+  	if tech == true
+  		$scope.myVar = "tech"
   	else
-  		$scope.myVar = "tech alert-success"
+  		$scope.myVar = "project alert-success"
 ]
