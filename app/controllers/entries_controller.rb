@@ -57,7 +57,7 @@ class EntriesController < ApplicationController
   # PATCH/PUT /entries/1
   def update
     if @entry.update(entry_params)
-      redirect_to @entry, notice: 'Entry was successfully updated.'
+      redirect_to root_path, notice: 'Entry was successfully updated.'
     else
       render action: 'edit'
     end
