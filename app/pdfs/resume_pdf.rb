@@ -7,7 +7,8 @@ class ResumePdf < Prawn::Document
 		resume_header
 		cover_statement
 		contact_info
-		list_experiences(entries)
+		list_projects(entries)
+		list_techs(entries)
 	end
 
 	def resume_header
@@ -27,39 +28,35 @@ class ResumePdf < Prawn::Document
 		text "Palm Coast, FL 32137"
 	end
 
-	def list_experiences(entries)
+	def list_projects(entries)
 
 		# List All Entries
 		start_new_page
-		text "All Entries", size: 24
-		move_down 10
+		text "Projects", size: 20
+		move_down 8
 		entries.each do |e|
-			text "<b>#{e.title}</b>", size: 16, inline_format: true
-			text "<i>#{e.entry_url}</i>", inline_format: true
-			text "#{strip_tags e.details.gsub(/&nbsp;/i," ")}"
-			text " "
+			if !e.tech
+				text "<b>#{e.title}</b>", size: 14, inline_format: true
+				text "<i>#{e.entry_url}</i>", inline_format: true
+				text "#{strip_tags e.details.gsub(/&nbsp;/i," ")}"
+				move_down 8
+			end
 		end
+	end
+	def list_techs(entries)
 
-		# Begin Projects
-#		start_new_page
-	#	text "Projects", size: 24
-	#	move_down 10
-#		entries.where(isProject: true).each do |e|
-	#		text e.title, size: 16
-		#	text "- #{e.details}"
-	#		text " "
-#		end
-
-		#Begin Techs
-#		start_new_page
-#		text "Dev Tools", size: 24
-#		move_down 10
-#		entries.where(isTech: true).each do |e|
-#			text e.title, size: 16
-#			text "- #{e.details}"
-#			text " "
-#		end
-
+		# List All Entries
+		start_new_page
+		text "Techs", size: 20
+		move_down 8
+		entries.each do |e|
+			if e.tech
+				text "<b>#{e.title}</b>", size: 14, inline_format: true
+				text "<i>#{e.entry_url}</i>", inline_format: true
+				text "#{strip_tags e.details.gsub(/&nbsp;/i," ")}"
+				move_down 8
+			end
+		end
 	end
 
 end
