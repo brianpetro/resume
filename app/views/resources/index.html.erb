@@ -1,8 +1,15 @@
-<h1>Listing resources</h1>
-<ul>
-<% @resources.each do |resource| %>
-	<li><%= resource.url %><br>
-	Tags: <%= raw resource.tags.map(&:name) %></li>
-<% end %>
-</ul>
-<%= link_to 'New Resource', new_resource_path %>
+<div ng-controller="ResourceCtrl">
+	<h1>Listing resources</h1>
+	<table class="table table-bordered">
+		<tr ng-repeat="site in resources">
+			<td>{{site.site.url}}</td>
+			<td>
+				<ul>
+					<li ng-repeat="tag in resources">
+						{{tag.tags[0].name}}
+					</li>
+				</ul>
+			</td>
+		</tr>
+	</table>
+</div>
