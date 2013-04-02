@@ -11,3 +11,8 @@ app.factory "Done", ["$resource", ($resource) ->
 app.factory "Resource", ["$resource", ($resource) ->
   $resource("/resources", {}, {})
 ]
+
+## -Filter in Coffee-
+##app.filter "techFilter", ->
+##	(text) ->
+##		text.split("").reverse().join ""
