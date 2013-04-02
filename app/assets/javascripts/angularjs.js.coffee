@@ -7,3 +7,7 @@ app.factory "Entry", ["$resource", ($resource) ->
 app.factory "Done", ["$resource", ($resource) ->
   $resource("/dones", {}, {update: {method: "PUT"}})
 ]
+
+app.factory "Resource", ["$resource", ($resource) ->
+  $resource("/resources", {}, {})
+]
