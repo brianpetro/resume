@@ -25,7 +25,6 @@ group :assets do
 end
 
 # Angular
-gem 'angularjs-rails'
 gem 'angular-ui-bootstrap-rails'
 
 # Twitter Bootstrap

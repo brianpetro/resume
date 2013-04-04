@@ -86,7 +86,6 @@ GEM
     addressable (2.3.3)
     afm (0.2.0)
     angular-ui-bootstrap-rails (0.1.1)
-    angularjs-rails (1.0.5)
     atomic (1.0.1)
     bootstrap-sass (2.3.0.1)
       sass (~> 3.2)
@@ -178,7 +177,6 @@ PLATFORMS
 DEPENDENCIES
   activerecord-deprecated_finders!
   angular-ui-bootstrap-rails
-  angularjs-rails
   arel!
   bootstrap-sass
   bootswatch-rails
