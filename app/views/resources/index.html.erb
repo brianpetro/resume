@@ -1,5 +1,9 @@
 <div ng-controller="ResourceCtrl">
 	<h1>Resources</h1>
+	<form ng-submit="addResource()" class="form-search">
+		<input type="string" ng-model="newResource.url">
+		<input type="submit" value="Add">
+	</form>
 	<table class="table table-bordered">
 		<tr ng-repeat="site in resources">
 			<td>{{site.site.url}}</td>
