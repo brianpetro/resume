@@ -10,7 +10,7 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
-//= require angularjsbp/angular.js
-//= require angularjsbp/angular-resource.js
+//= require angular-1.1.0/angular.js
+//= require angular-1.1.0/angular-resource.js
 //= require tiny_mce/tiny_mce.js
 //= require_tree .
