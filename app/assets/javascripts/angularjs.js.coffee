@@ -1,15 +1,15 @@
 app = angular.module("Resume", ["ngResource"])
 
 app.factory "Entry", ["$resource", ($resource) ->
-  $resource("/entries")
+  $resource("/entries.json", {}, {}, {})
 ]
 
 app.factory "Done", ["$resource", ($resource) ->
-  $resource("/dones", {}, {update: {method: "PUT"}})
+  $resource("/dones.json", {}, {update: {method: "PUT"}}, {})
 ]
 
 app.factory "Resource", ["$resource", ($resource) ->
-  $resource("/resources", {}, {})
+  $resource("/resources.json", {}, {}, {})
 ]
 
 ## -Filter in Coffee-
