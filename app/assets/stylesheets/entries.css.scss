@@ -5,3 +5,19 @@ div#social a.btn {
 div.tech {
 	background-color: #007399;
 }
+
+.slide-enter-setup, .slide-enter-start {
+	position:relative;
+  -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.8s;
+  -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.8s;
+  -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.8s;
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.8s;
+}
+
+.slide-enter-setup {
+	left: 1000px;
+}
+
+.slide-enter-start {
+	left: 0px;
+}
