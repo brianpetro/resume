@@ -4,13 +4,18 @@
 		<input type="string" ng-model="newResource.url">
 		<input type="submit" value="Add">
 	</form>
+	<span class="lead">Instant Search URL and Tags</span>
+	<input type="text" ng-model="search.$" class="input-large search-query">
 	<table class="table table-bordered">
-		<tr ng-repeat="site in resources">
-			<td>{{site.site.url}}</td>
+		<tr ng-repeat="site in resources | filter:search">
+			<td><a class="btn btn-success" href="{{site.site.url}}">Open Resource</a></td>
 			<td>
 				<ul>
 					<li ng-repeat="tag in site.tags">
 						{{tag.name}}
+					</li>
+					<li>
+						<a href="/resources/{{site.site.id}}/edit">Add Tag</a>
 					</li>
 				</ul>
 			</td>
