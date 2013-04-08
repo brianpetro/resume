@@ -6,31 +6,23 @@ div.tech {
 	background-color: #007399;
 }
 
-.slide-enter-setup, .slide-enter-start, .slide-move-setup, .slide-move-setup, .slide-leave-setup, .slide-leave-setup {
+.slide-enter-setup, .slide-enter-start, .slide-leave-setup, .slide-leave-start {
 	position:relative;
-  -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.8s;
-  -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.8s;
-  -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.8s;
-  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.8s;
+  -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+  -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+  -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
 }
 
-
-.slide-enter-start {
-	top: 0px;
-}
 .slide-enter-setup {
-	top: 1000px;
+	right: -100%;
 }
-
-.slide-move-start {
-	left: 0px;
-}
-.slide-move-setup {
-	left: 1000px;
-}
-.slide-leave-start {
-	left: 1000px;
+.slide-enter-start {
+	right: 0%;
 }
 .slide-leave-setup {
-	left: 0px;
+	right: 0%;
+}
+.slide-leave-start {
+	right: 100%;
 }
