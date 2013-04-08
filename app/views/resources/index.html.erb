@@ -10,12 +10,14 @@
 		<tr ng-repeat="site in resources | filter:search">
 			<td><a class="btn btn-success" href="{{site.site.url}}">Open Resource</a></td>
 			<td>
-				<ul>
-					<li ng-repeat="tag in site.tags">
-						{{tag.name}}
+				<ul class="unstyled">
+					<li>
+						<span ng-repeat="tag in site.tags">
+							{{tag.name}},
+						</span>
 					</li>
 					<li>
-						<a href="/resources/{{site.site.id}}/edit">Add Tag</a>
+						<a class="btn btn-mini" href="/resources/{{site.site.id}}/edit">Edit</a>
 					</li>
 				</ul>
 			</td>
