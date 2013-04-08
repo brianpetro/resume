@@ -6,7 +6,7 @@ div.tech {
 	background-color: #007399;
 }
 
-.slide-enter-setup, .slide-enter-start {
+.slide-enter-setup, .slide-enter-start, .slide-move-setup, .slide-move-setup, .slide-leave-setup, .slide-leave-setup {
 	position:relative;
   -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.8s;
   -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.8s;
@@ -14,10 +14,23 @@ div.tech {
   transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.8s;
 }
 
-.slide-enter-setup {
-	left: 1000px;
-}
 
 .slide-enter-start {
+	top: 0px;
+}
+.slide-enter-setup {
+	top: 1000px;
+}
+
+.slide-move-start {
+	left: 0px;
+}
+.slide-move-setup {
+	left: 1000px;
+}
+.slide-leave-start {
+	left: 1000px;
+}
+.slide-leave-setup {
 	left: 0px;
 }
