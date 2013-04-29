@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130328102031) do
+ActiveRecord::Schema.define(version: 20130429181053) do
 
   create_table "commits", force: true do |t|
     t.text     "commit"
@@ -34,6 +34,14 @@ ActiveRecord::Schema.define(version: 20130328102031) do
     t.datetime "updated_at"
     t.string   "entry_url"
     t.boolean  "tech"
+  end
+
+  create_table "qscores", force: true do |t|
+    t.integer  "resource_id"
+    t.integer  "tag_id"
+    t.float    "value"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "resources", force: true do |t|
