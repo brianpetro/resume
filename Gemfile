@@ -11,6 +11,13 @@ group :production do
 	gem 'thin'
 end
 
+group :development do
+  gem 'railroady'
+	gem "better_errors"
+	gem "binding_of_caller"
+	gem "quiet_assets"
+end
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

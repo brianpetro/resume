@@ -87,16 +87,23 @@ GEM
     afm (0.2.0)
     angular-ui-bootstrap-rails (0.1.1)
     atomic (1.0.1)
+    better_errors (0.7.0)
+      coderay (>= 1.0.0)
+      erubis (>= 2.6.6)
+    binding_of_caller (0.7.1)
+      debug_inspector (>= 0.0.1)
     bootstrap-sass (2.3.0.1)
       sass (~> 3.2)
     bootswatch-rails (0.4.0)
       railties (>= 3.1)
     builder (3.1.4)
+    coderay (1.0.9)
     coffee-script (2.2.0)
       coffee-script-source
       execjs
     coffee-script-source (1.6.1)
     daemons (1.1.9)
+    debug_inspector (0.0.2)
     erubis (2.7.0)
     eventmachine (1.0.3)
     execjs (1.4.0)
@@ -139,9 +146,12 @@ GEM
     prawn (0.12.0)
       pdf-reader (>= 0.9.0)
       ttfunk (~> 1.0.2)
+    quiet_assets (1.0.2)
+      railties (>= 3.1, < 5.0)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
+    railroady (1.1.0)
     rake (10.0.3)
     rdoc (3.12.2)
       json (~> 1.4)
@@ -178,6 +188,8 @@ DEPENDENCIES
   activerecord-deprecated_finders!
   angular-ui-bootstrap-rails
   arel!
+  better_errors
+  binding_of_caller
   bootstrap-sass
   bootswatch-rails
   coffee-rails!
@@ -185,6 +197,8 @@ DEPENDENCIES
   octokit
   pg
   prawn
+  quiet_assets
+  railroady
   rails!
   sass-rails!
   sprockets-rails!
