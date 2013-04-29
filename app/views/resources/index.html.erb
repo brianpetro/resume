@@ -8,7 +8,10 @@
 	<input type="text" ng-model="search.$" class="input-large search-query">
 	<table class="table table-bordered">
 		<tr ng-repeat="site in resources | filter:search">
-			<td><a class="btn btn-success" href="{{site.site.url}}">Open Resource</a></td>
+			<td>
+				<a href="/qscores/upvote/{{site.qscores[0].id}}" ng-show="site.qscores[0].id" class="btn btn-info">upvote</a>
+				<a class="btn btn-success" href="{{site.site.url}}">Open Resource</a>
+			</td>
 			<td>
 				<ul class="unstyled">
 					<li>
