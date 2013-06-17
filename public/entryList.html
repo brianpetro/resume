@@ -1,0 +1,13 @@
+<ul class="unstyled">
+	<li ng-animate=" 'slide' " ng-repeat="entry in entries | orderBy:'title' | filter:search" ng-init="entryClass=isClass(entry.tech)">
+		<div class="alert" ng-class="entryClass">
+			<a ng-click="entry.showThis = !entry.showThis" href="">
+				<h2>{{entry.title}}</h2>
+			</a>
+			<div class="well" ng-show="entry.showThis">
+				<a href="{{entry.entry_url}}" ng-show="entry.entry_url" class="btn btn-success btn-small pull-right">Open Project</a>
+				<div ng-bind-html-unsafe="entry.details"></div>
+			</div>
+		</div>
+	</li>
+</ul>

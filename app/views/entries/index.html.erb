@@ -1,47 +1,71 @@
 <div ng-controller="EntryCtrl">
-	<div class="row">
+	<div class="row-fluid">
 		<div class="span5 offset1">
-			<h1>Brian Petro</h1>
-			<i>Click entries to expand. Built with Rails 4 and AngularJS. <strong>INCOMPLETE.</strong></i><br>
+			<h1>Hi. I'm Brian.</h1>
 			<div id="social" class="well well-small">
 				<a href="/entries.pdf" class="btn btn-danger"><strong>View Resume PDF</strong></a>
 				<!-- Linkedin -->
 				<a href="https://www.linkedin.com/in/petrobrian/" class="btn btn-primary">
 					<img src="https://s1-s.licdn.com/scds/common/u/img/logos/LinkedIn_logo_white_92x22_v2.png"alt="View Brian Petro's profile on LinkedIn">
 				</a>
-				<!-- Careers Stackoverflow
-				<a class="btn" href="http://careers.stackoverflow.com/brianpetro">
-					<img src="http://careerscdn.sstatic.net/careers/Img/logo-new.png" style="max-height:23px;">
-				</a>-->
+				<!-- StackOverflow -->
 				<a href="http://careers.stackoverflow.com/brianpetro">
 					<img src="http://stackoverflow.com/users/flair/1885896.png?theme=dark" width="150" height="58" alt="profile for Brian Petro at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Brian Petro at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
 				</a>
 			</div>
 		</div>
-		<div class="span5">
-			<div class="alert">
-				<h2>Resume Instant Search</h2>
-				<span class="lead">Enter Project Title To See Technologies Used.</span>
-				<input type="text" ng-model="search.$" class="input-large search-query">
-			</div>
+	</div>
+	<hr>
+	<div class="row-fluid">
+		<div class="offset1">
+			<h2>Hire me so you can...</h2>
+		</div>
+		<div class="offset2">
+			<h3>Launch your software as a service(saas) business.</h3>
+		</div>
+		<div class="offset2">
+			<h3>Have an extra hand on your current project.</h3>
+		</div>
+		<div class="offset2">
+			<h3>Save time with automation.</h3>
+		</div>
+		<div class="offset2">
+			<h3>Close github issues.</h3>
 		</div>
 	</div>
-	<div class="row">
-		<div class="span10 offset1">
+	<hr>
+	<div class="row-fluid">
+		<div class="offset1">
+			<h2>Let's begin.</h2>
+		</div>
+		<div class="offset2">
 			<ul class="unstyled">
-				<li ng-animate=" 'slide' " ng-repeat="entry in entries | orderBy:'title' | filter:search" ng-init="entryClass=isClass(entry.tech)">
-					<div class="alert" ng-class="entryClass">
-						<a ng-click="entry.showThis = !entry.showThis" href="">
-							<span class="lead pull-right">Click to expand.</span>
-							<h2>{{entry.title}}</h2>
-						</a>
-						<div class="well" ng-show="entry.showThis">
-							<a href="{{entry.entry_url}}" ng-show="entry.entry_url" class="btn btn-success btn-small pull-right">Open Project</a>
-							<div ng-bind-html-unsafe="entry.details"></div>
-						</div>
-					</div>
+				<li>
+					<h3>Discovery</h3>
+					<p>We begin with an initial consultation. Tell me the story behind your project.</p>
+				</li>
+				<li>
+					<h3>Determine needs and budget.</h3>
+				</li>
+				<li>
+					<h3>Receive a proposal.</h3>
+				</li>
+				<li>
+					<h3>Agree on timeframes, deliverables, and requirements.</h3>
+				</li>
+				<li>
+					<h3>Development and communication.</h3>
 				</li>
 			</ul>
+		</div>
+	</div>
+	<hr>
+	<div class="row-fluid">
+		<div class="offset1">
+			<h2>Click to explore past projects.</h2>
+		</div>
+		<div class="span8 offset2">
+			<entry-list></entry-list>
 		</div> <!-- class span -->
 	</div> <!-- class row -->
 </div> <!-- ng-controller -->

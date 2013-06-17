@@ -16,6 +16,11 @@ app.factory "Resource", ["$resource", ($resource) ->
   $resource("/resources", {}, {}, {})
 ]
 
+app.directive "entryList", [ ->
+	restrict: "E"
+	templateUrl: "/entryList.html"
+]
+
 ## -Filter in Coffee-
 ##app.filter "techFilter", ->
 ##	(text) ->
