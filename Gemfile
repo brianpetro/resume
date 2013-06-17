@@ -36,7 +36,6 @@ gem 'angular-ui-bootstrap-rails'
 
 # Twitter Bootstrap
 gem 'bootstrap-sass'
-gem 'bootswatch-rails'
 
 # PDF Generation
 gem 'prawn'

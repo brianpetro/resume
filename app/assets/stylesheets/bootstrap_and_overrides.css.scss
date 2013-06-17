@@ -1,7 +1,3 @@
-// Using 'Cosmo' Bootswatch
-// First import cosmo variables
-@import "bootswatch/cosmo/variables";
-
 // Then bootstrap itself
 @import "bootstrap";
 
@@ -11,36 +7,8 @@ body { padding-top: 0px; }
 // Responsive styles go here in case you want them
 @import "bootstrap-responsive";
 
-// And finally bootswatch style itself
-@import "bootswatch/cosmo/bootswatch";
-
-
-// Overrides
-a {
-	color: #dddddd;
-}
-a:hover {
-	color: #ffffff;
-}
-
-a.btn {
-	color: #000000;
-}
-
 body {
 	background-image:url("https://dl.dropbox.com/s/kzobu7ajnmzjxnp/noisy_grid.png?token_hash=AAEQC1bRsD3g_5J-Zca_Rk5oKTchiZ_g_Mgzvlcr3ltrcw");
-}
-
-h1 {
-	font-size: 3em;
-}
-
-h2 {
-	font-size: 2em;
-}
-
-h3{
-	font-size: 1.5em;
 }
 
 .well {
