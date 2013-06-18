@@ -72,4 +72,22 @@
 			<entry-list></entry-list>
 		</div> <!-- class span -->
 	</div> <!-- class row -->
+	<div class="row-fluid">
+		<form accept-charset="UTF-8" action="/contact" class="message" data-post-form="new_message" id="contact" method="post">
+			<div style="margin:0;padding:0;display:inline">
+				<input name="utf8" type="hidden" value="&#x2713;" />
+				<input name="_method" type="hidden" value="post" />
+				<input name="authenticity_token" type="hidden" value="{{$httpProvider.defaults.headers.common['X-CSRF-Token']}}" />
+			</div>
+			<div class="field">
+		    <label for="message_email">Email</label>
+		    <input id="message_email" name="message[email]" type="text" />
+		  </div>
+		  <div class="field">
+			  <label for="message_body">Body</label>
+			  <textarea id="message_body" name="message[body]"></textarea>
+			</div>
+			<br><input name="commit" type="submit" value="Send" />
+		</form>
+	</div>
 </div> <!-- ng-controller -->

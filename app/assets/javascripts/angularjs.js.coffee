@@ -2,6 +2,11 @@ app = angular.module("Resume", ["ngResource"])
 
 app.config ["$httpProvider", ($httpProvider) ->
   $httpProvider.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest"
+  m = document.getElementsByTagName("meta")
+  for i of m
+    if m[i].name is "csrf-token"
+      $httpProvider.defaults.headers.common["X-CSRF-Token"] = m[i].content
+      break
 ]
 
 app.factory "Entry", ["$resource", ($resource) ->
