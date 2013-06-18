@@ -15,3 +15,6 @@
 /log/*.log
 /tmp
 /doc/*.svg
+
+# Ignore Dev ENV vars
+/config/dev_env.rb
