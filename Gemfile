@@ -48,3 +48,6 @@ gem 'jbuilder', '~> 1.0.1'
 
 # Github API integration
 gem 'octokit'
+
+gem 'jquery-rails'
+gem 'jquery-ui-rails'

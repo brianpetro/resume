@@ -72,22 +72,28 @@
 			<entry-list></entry-list>
 		</div> <!-- class span -->
 	</div> <!-- class row -->
+	<hr>
 	<div class="row-fluid">
-		<form accept-charset="UTF-8" action="/contact" class="message" data-post-form="new_message" id="contact" method="post">
-			<div style="margin:0;padding:0;display:inline">
-				<input name="utf8" type="hidden" value="&#x2713;" />
-				<input name="_method" type="hidden" value="post" />
-				<input name="authenticity_token" type="hidden" value="{{$httpProvider.defaults.headers.common['X-CSRF-Token']}}" />
-			</div>
-			<div class="field">
-		    <label for="message_email">Email</label>
-		    <input id="message_email" name="message[email]" type="text" />
-		  </div>
-		  <div class="field">
-			  <label for="message_body">Body</label>
-			  <textarea id="message_body" name="message[body]"></textarea>
-			</div>
-			<br><input name="commit" type="submit" value="Send" />
-		</form>
+		<div class="offset1">
+			<h2>Send me an email.</h2>
+		</div>
+		<div class="offset2 span4">
+			<form accept-charset="UTF-8" action="/contact" class="message" data-post-form="new_message" id="contact" method="post">
+				<div style="margin:0;padding:0;display:inline">
+					<input name="utf8" type="hidden" value="&#x2713;" />
+					<input name="_method" type="hidden" value="post" />
+					<input name="authenticity_token" type="hidden" value="{{$httpProvider.defaults.headers.common['X-CSRF-Token']}}" />
+				</div>
+				<div class="field">
+				  <label for="message_email">Your Email:</label>
+				  <input id="message_email" class="input-block-level" name="message[email]" type="text" />
+				</div>
+				<div class="field">
+					<label for="message_body">Your Message:</label>
+					<textarea id="message_body" style="height:8em;" class="input-block-level" name="message[body]"></textarea>
+				</div>
+				<br><input name="commit" class="btn btn-success pull-right" type="submit" value="Send" />
+			</form>
+		</div>
 	</div>
 </div> <!-- ng-controller -->
