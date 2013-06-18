@@ -28,8 +28,8 @@ module Brianpetro
 			:address              => "smtp.gmail.com",
 			:port                 => 587,
 			:domain               => "yourdomain.dev",
-			:user_name            => "bpetro13@gmail.com",
-			:password             => "Bjp1391!",
+			:user_name            => ENV['GMAIL_EMAIL'],
+			:password             => ENV['GMAIL_PASS'],
 			:authentication       => :plain,
 			:enable_starttls_auto => true
 		}
